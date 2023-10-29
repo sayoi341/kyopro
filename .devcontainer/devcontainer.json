@@ -13,7 +13,7 @@
 	// "forwardPorts": [],
 	
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "chmod u+x .devcontainer/init.sh && sudo .devcontainer/init.sh && chmod u+x .devcontainer/cargo.sh && sudo .devcontainer/cargo.sh",
+	"postCreateCommand": "chmod +x .devcontainer/init.sh && sudo ./.devcontainer/init.sh && chmod +x .devcontainer/cargo.sh && sudo .devcontainer/cargo.sh",
 	
 	// Configure tool-specific properties.
 	"customizations": {
@@ -23,8 +23,8 @@
 		}
 	},
 
-	"runArgs": [ "--name", "kyopro"]
+	"runArgs": [ "--name", "kyopro"],
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+	"remoteUser": "root"
 }

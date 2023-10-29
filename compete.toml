@@ -16,29 +16,14 @@ test-suite = "{{ manifest_dir }}/testcases/{{ bin_alias }}.yml"
 # Open files with the command (`jq` command that outputs `string[] | string[][]`)
 #
 # VSCode:
-open = '[["code", "-a", .manifest_dir], ["code"] + (.paths | map([.src, .test_suite]) | flatten)]'
+#open = '[["code", "-a", .manifest_dir], ["code"] + (.paths | map([.src, .test_suite]) | flatten)]'
 # Emacs:
 #open = '["emacsclient", "-n"] + (.paths | map([.src, .test_suite]) | flatten)'
 
 [template]
 src = '''
-#![allow(unused_imports)]
-use itertools::{Itertools, MinMaxResult};
-use proconio::{input, marker::*};
-use std::{
-    cmp::{max, min},
-    collections::{BTreeMap, BTreeSet, BinaryHeap, HashMap, HashSet, VecDeque},
-    io::*,
-    iter::{FromIterator, IntoIterator},
-    ops::{Add, Div, Mul, Neg, Sub},
-    str::FromStr,
-    vec,
-};
-
 fn main() {
-    input! {
-    }
-    println!("Hello World");
+    todo!();
 }
 '''
 
@@ -114,7 +99,7 @@ platform = "atcoder"
 #
 # - `contest`:      Contest ID. **May be nil**
 # - `package_name`: Package name
-path = "./src/{{ contest }}"
+path = "./{{ contest }}"
 
 #[new]
 #kind = "oj-api"
@@ -141,7 +126,7 @@ path = "./src/{{ contest }}"
 
 [test]
 # Toolchain for the test. (optional)
-toolchain = "1.70.0"
+toolchain = "1.42.0"
 # Profile for `cargo build`. ("dev" | "release")
 #
 # Defaults to `"dev"`.
