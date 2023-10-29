@@ -13,6 +13,10 @@ use std::{
 
 fn main() {
     input! {
+        n: usize,
+        x: usize,
+        aa: [usize; n],
     }
-    println!("Hello World");
+
+    println!("{}", if aa.binary_search(&x).is_ok() { "Yes" } else { "No" } );
 }

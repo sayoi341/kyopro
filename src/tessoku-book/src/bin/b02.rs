@@ -13,6 +13,17 @@ use std::{
 
 fn main() {
     input! {
+        a: usize,
+        b: usize,
     }
-    println!("Hello World");
+
+    let mut count: usize = 0;
+
+    for i in a..=b {
+        if 100 % i == 0 {
+            count += 1;
+        }
+    }
+
+    println!("{}", if count == 0 { "No" } else { "Yes" });
 }
