@@ -12,7 +12,6 @@ use std::{
 };
 
 fn main() {
-    input! {
-    }
+    input! {}
     println!("Hello World");
 }

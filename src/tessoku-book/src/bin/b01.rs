@@ -13,6 +13,8 @@ use std::{
 
 fn main() {
     input! {
+        a: usize,
+        b: usize,
     }
-    println!("Hello World");
+    println!("{}", a + b);
 }
