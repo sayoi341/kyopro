@@ -19,6 +19,10 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"GitHub.copilot",
+				"eamodio.gitlens",
+				"seatonjiang.gitmoji-vscode",
+				"oderwat.indent-rainbow"
 			]
 		}
 	},
