@@ -12,6 +12,21 @@ use std::{
 };
 
 fn main() {
-    input! {}
-    println!("Hello World");
+    input! {
+        n: usize,
+        k: usize,
+        parr: [usize; n],
+        qarr: [usize; n],
+    }
+
+    for p in &parr {
+        for q in &qarr {
+            if p + q == k {
+                println!("Yes");
+                return;
+            }
+        }
+    }
+
+    println!("No");
 }
