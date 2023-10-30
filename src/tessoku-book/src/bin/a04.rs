@@ -13,6 +13,9 @@ use std::{
 
 fn main() {
     input! {
+        n: usize,
     }
-    println!("Hello World");
+
+    // nを10桁の2進数表記で出力する
+    println!("{:010b}", n);
 }

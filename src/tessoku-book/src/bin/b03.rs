@@ -13,6 +13,20 @@ use std::{
 
 fn main() {
     input! {
+        n: usize,
+        a: [usize; n],
     }
-    println!("Hello World");
+
+    for i in 0..n {
+        for j in 0..n {
+            for k in 0..n {
+                if a[i] + a[j] + a[k] == 1000 {
+                    println!("Yes");
+                    return;
+                }
+            }
+        }
+    }
+
+    println!("No");
 }

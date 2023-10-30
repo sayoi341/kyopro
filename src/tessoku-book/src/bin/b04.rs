@@ -13,6 +13,10 @@ use std::{
 
 fn main() {
     input! {
+        mut n: usize,
     }
-    println!("Hello World");
+
+    // 二進数nを10進数表記で出力する
+
+    println!("{}", ans);
 }
