@@ -13,10 +13,21 @@ use std::{
 
 fn main() {
     input! {
-        mut n: usize,
+        mut n: Chars,
     }
 
     // 二進数nを10進数表記で出力する
+
+    let mut ans = 0;
+    let mut i = 0;
+
+    while !n.is_empty() {
+        match n.pop() {
+            Some('1') => ans += 2i64.pow(i),
+            _ => {}
+        }
+        i += 1;
+    }
 
     println!("{}", ans);
 }
