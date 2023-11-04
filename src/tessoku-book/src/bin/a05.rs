@@ -13,6 +13,19 @@ use std::{
 
 fn main() {
     input! {
+        n: isize,
+        k: isize,
     }
-    println!("Hello World");
+
+    let mut ans: usize = 0;
+
+    for i in 1..=n {
+        for j in 1..=n {
+            if k - i - j <= n && k - i - j >= 1 {
+                ans += 1;
+            }
+        }
+    }
+
+    println!("{}", ans);
 }
