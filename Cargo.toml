@@ -1,4 +1,4 @@
-workspace = {members = ["src/tessoku-book", "src/abc327", "src/abc329"],exclude = []}
+workspace = {members = ["src/tessoku-book", "src/abc327", "src/abc329", "src/abc328"],exclude = []}
 [package]
 name = "kyopro"
 version = "0.1.0"
