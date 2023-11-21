@@ -1,25 +1,24 @@
 {
 	"name": "kyopro",
 	"image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
-
 	"features": {
 		"ghcr.io/devcontainers/features/rust:1": "1.70.0"
 	},
-
 	"postCreateCommand": "chmod +x .devcontainer/init.sh && sudo ./.devcontainer/init.sh && chmod +x .devcontainer/cargo.sh && sudo .devcontainer/cargo.sh",
-	
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"GitHub.copilot",
 				"eamodio.gitlens",
 				"seatonjiang.gitmoji-vscode",
-				"oderwat.indent-rainbow"
+				"oderwat.indent-rainbow",
+				"tamasfe.even-better-toml"
 			]
 		}
 	},
-
-	"runArgs": [ "--name", "kyopro"],
-
+	"runArgs": [
+		"--name",
+		"kyopro"
+	],
 	"remoteUser": "root"
 }
