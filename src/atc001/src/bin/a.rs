@@ -8,10 +8,7 @@ use std::{
     iter::{FromIterator, IntoIterator},
     ops::{Add, Div, Mul, Neg, Sub},
     str::FromStr,
-    vec,
 };
-
-fn dfs ()
 
 fn main() {
     input! {
@@ -22,51 +19,37 @@ fn main() {
 
     // 探索済みかどうかの配列
     let mut visit = vec![vec![false; w]; h];
-    //　キューの作成
-    let mut q: VecDeque<(isize, isize)> = VecDeque::new();
+    // 深さ優先探索
+    // キューの作成
+    let mut queue: VecDeque<(usize, usize)> = VecDeque::new();
 
     // 開始位置の探索
-    for (i, vw) in c.iter().enumerate().take(h) {
-        for (j, v) in vw.iter().enumerate().take(w) {
-            if *v == 's' {
-                q.push_back((j as isize, i as isize));
-                visit[j][i] = true;
+    for y_i in 0..h {
+        for x_i in 0..w {
+            if c[y_i][x_i] == 's' {
+                visit[y_i][x_i] = true;
+                queue.push_back((x_i, y_i));
             }
         }
     }
 
-    while let Some((x, y)) = q.pop_back() {
-        // 探索
-        for i in x - 1..=x + 1 {
-            // ガード
-            if i < 0 || w as isize <= i {
-                continue;
-            }
-
-            if c[y as usize][i as usize] == 'g' {
-                println!("Yes");
-                return;
-            }
-
-            if c[y as usize][i as usize] == '.' && !visit[y as usize][i as usize] {
-                q.push_back((i, y));
-                visit[y as usize][i as usize] = true;
-            }
+    while let Some((x, y)) = queue.pop_back() {
+        // ゴールに到達したら終了
+        if c[y][x] == 'g' {
+            println!("Yes");
+            return;
         }
 
-        for j in y - 1..=y + 1 {
-            if j < 0 || h as isize <= j {
-                continue;
-            }
+        // 4方向の探索
+        // !0はビット反転で-1になる
+        for (dx, dy) in &[(1, 0), (0, 1), (!0, 0), (0, !0)] {
+            // warp_addでオーバーフローしてもpanicしない
+            let (nx, ny) = (x.wrapping_add(*dx), y.wrapping_add(*dy));
 
-            if c[j as usize][x as usize] == 'g' {
-                println!("Yes");
-                return;
-            }
-
-            if c[j as usize][x as usize] == '.' && !visit[j as usize][x as usize] {
-                q.push_back((x, j));
-                visit[j as usize][x as usize] = true;
+            // 範囲内かつ壁でなく、探索済みでなければ探索
+            if nx < w && ny < h && !visit[ny][nx] && c[ny][nx] != '#' {
+                visit[ny][nx] = true;
+                queue.push_back((nx, ny));
             }
         }
     }
