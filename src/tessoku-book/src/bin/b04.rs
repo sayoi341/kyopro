@@ -22,9 +22,8 @@ fn main() {
     let mut i = 0;
 
     while !n.is_empty() {
-        match n.pop() {
-            Some('1') => ans += 2i64.pow(i),
-            _ => {}
+        if let Some('1') = n.pop() {
+            ans += 2i64.pow(i)
         }
         i += 1;
     }
