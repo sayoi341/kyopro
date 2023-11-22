@@ -29,7 +29,7 @@ fn dfs(graph: &Vec<Vec<usize>>, v: usize, c: isize, colors: &mut Vec<isize>) -> 
             return false;
         }
     }
-    return true;
+    true
 }
 
 fn is_bipartite(graph: &Vec<Vec<usize>>) -> bool {
@@ -45,7 +45,7 @@ fn is_bipartite(graph: &Vec<Vec<usize>>) -> bool {
             return false;
         }
     }
-    return true;
+    true
 }
 
 fn main() {
@@ -63,9 +63,9 @@ fn main() {
         graph[b[i] - 1].push(a[i] - 1);
     }
 
-    for i in 0..n {
-        graph[i].sort();
-        graph[i].dedup();
+    for g in graph.iter_mut().take(n) {
+        g.sort();
+        g.dedup();
     }
 
     println!("{}", if is_bipartite(&graph) { "Yes" } else { "No" });

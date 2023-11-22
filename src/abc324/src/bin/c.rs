@@ -20,8 +20,7 @@ fn main() {
 
     let mut ans: Vec<usize> = Vec::new();
 
-    for i in 0..n {
-        let s = &sa[i];
+    for (i, s) in sa.iter().enumerate().take(n) {
         if t.len().abs_diff(s.len()) >= 2 {
             continue;
         }
