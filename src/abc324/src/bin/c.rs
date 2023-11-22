@@ -45,9 +45,9 @@ fn main() {
             }
         }
 
-        if (pre + suf) >= min(t.len(), s.len()) {
-            ans.push(i);
-        } else if t.len() == s.len() && (pre + suf + 1) == s.len() {
+        if (pre + suf) >= min(t.len(), s.len())
+            || (t.len() == s.len() && (pre + suf + 1) == s.len())
+        {
             ans.push(i);
         }
     }
