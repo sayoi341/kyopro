@@ -13,6 +13,10 @@ use std::{
 
 fn main() {
     input! {
+        n: usize,
+        x: usize,
+        sa: [usize;n]
     }
-    println!("Hello World");
+
+    println!("{}", sa.iter().filter(|&a| a <= &x).sum::<usize>())
 }

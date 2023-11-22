@@ -13,6 +13,23 @@ use std::{
 
 fn main() {
     input! {
+        _n: usize,
+        q: usize,
+        s: Chars,
+        lr: [(usize, usize);q],
     }
-    println!("Hello World");
+
+    let mut sum_sum = vec![0; s.len()];
+
+    for i in 0..s.len() - 1 {
+        if s[i] == s[i + 1] {
+            sum_sum[i + 1] = sum_sum[i] + 1;
+        } else {
+            sum_sum[i + 1] = sum_sum[i];
+        }
+    }
+
+    for (l, r) in lr {
+        println!("{}", sum_sum[r - 1] - sum_sum[l - 1]);
+    }
 }

@@ -13,6 +13,28 @@ use std::{
 
 fn main() {
     input! {
+        n: usize,
+        da: [usize;n]
     }
-    println!("Hello World");
+
+    let mut ans = 0usize;
+
+    for i in 1..=n {
+        'dayloop: for j in 1..=da[i - 1] {
+            let month = i.to_string().chars().collect_vec();
+            let day = j.to_string().chars().collect_vec();
+
+            for c_m in month.iter() {
+                for c_d in day.iter() {
+                    if c_m != c_d {
+                        continue 'dayloop;
+                    }
+                }
+            }
+            ans += 1;
+        }
+    }
+
+    // この書き方めっちゃいいわ
+    println!("{ans}");
 }
