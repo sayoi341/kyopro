@@ -13,6 +13,18 @@ use std::{
 
 fn main() {
     input! {
+        n: usize,
+        q: usize,
+        aa: [usize; n],
+        lr: [(usize, usize); q],
     }
-    println!("Hello World");
+
+    let mut acc = vec![0; n + 1];
+    for i in 0..n {
+        acc[i + 1] = acc[i] + aa[i];
+    }
+
+    for (l, r) in lr {
+        println!("{}", acc[r] - acc[l - 1]);
+    }
 }
