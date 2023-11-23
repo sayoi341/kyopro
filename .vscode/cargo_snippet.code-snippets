@@ -1,17 +1,4 @@
 {
-  "bfs": {
-    "scope": "rust",
-    "prefix": "bfs",
-    "body": [
-      "pub fn bfs() {",
-      "    let mut q: VecDeque<(isize, isize)> = VecDeque::new();",
-      "    let mut visit = vec![vec![false; w]; h];",
-      "    q.push_back((s_x, s_y));",
-      "    visit[s_y][s_x] = true;",
-      "    while let Some((x, y)) = q.pop_back() {}",
-      "}"
-    ]
-  },
   "gcd": {
     "scope": "rust",
     "prefix": "gcd",
