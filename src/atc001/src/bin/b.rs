@@ -1,5 +1,6 @@
 #![allow(unused_imports)]
 use itertools::{Itertools, MinMaxResult};
+use petgraph::unionfind::UnionFind;
 use proconio::{input, marker::*};
 use std::{
     cmp::{max, min},
@@ -10,9 +11,26 @@ use std::{
     str::FromStr,
     vec,
 };
+use superslice::Ext;
 
 fn main() {
     input! {
+        n: usize,
+        q: usize,
     }
-    println!("Hello World");
+
+    let mut uf: UnionFind<usize> = UnionFind::new(n);
+
+    for _i in 0..q {
+        input! {
+            p: usize,
+            a: usize,
+            b: usize,
+        }
+        if p == 0 {
+            uf.union(a, b);
+        } else {
+            println!("{}", if uf.equiv(a, b) { "Yes" } else { "No" });
+        }
+    }
 }
