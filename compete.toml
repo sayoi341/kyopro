@@ -23,8 +23,10 @@ open = '[["code", "-a", .manifest_dir], ["code"] + (.paths | map([.src, .test_su
 [template]
 src = '''
 #![allow(unused_imports)]
+use ac_library::Dsu;
 use itertools::{Itertools, MinMaxResult};
-use proconio::{input, marker::*};
+use petgraph::unionfind::UnionFind;
+use proconio::{fastout, input, marker::*};
 use std::{
     cmp::{max, min},
     collections::{BTreeMap, BTreeSet, BinaryHeap, HashMap, HashSet, VecDeque},
@@ -32,9 +34,10 @@ use std::{
     iter::{FromIterator, IntoIterator},
     ops::{Add, Div, Mul, Neg, Sub},
     str::FromStr,
-    vec,
 };
+use superslice::Ext;
 
+#[fastout]
 fn main() {
     input! {
     }
@@ -53,6 +56,7 @@ edition = "2018"
 #opt-level = 3
 #'''
 dependencies = '''
+ac-library-rs = "=0.1.1"
 num = "=0.2.1"
 num-bigint = "=0.2.6"
 num-complex = "=0.2.4"

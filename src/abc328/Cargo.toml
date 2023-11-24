@@ -41,6 +41,7 @@ name = "abc328-g"
 path = "src/bin/g.rs"
 
 [dependencies]
+ac-library-rs = "=0.1.1"
 num = "=0.2.1"
 num-bigint = "=0.2.6"
 num-complex = "=0.2.4"
