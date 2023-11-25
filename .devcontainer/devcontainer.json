@@ -16,6 +16,9 @@
 			]
 		}
 	},
+	"containerEnv": {
+		"CARGO_BUILD_TARGET_DIR": "/tmp/target"
+	},
 	"runArgs": [
 		"--name",
 		"kyopro"
