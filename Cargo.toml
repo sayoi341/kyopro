@@ -5,7 +5,9 @@ workspace = { members = [
     "src/abc327",
     "src/abc328",
     "src/abc329",
-    "src/tessoku-book", "src/atc001",
+    "src/tessoku-book",
+    "src/atc001",
+    "src/abc330",
 ], exclude = [
 ] }
 [package]
