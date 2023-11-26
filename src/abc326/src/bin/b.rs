@@ -15,7 +15,6 @@ use superslice::Ext;
 
 #[fastout]
 fn main() {
-    input! {
-    }
+    input! {}
     println!("Hello World");
 }
