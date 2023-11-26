@@ -1,8 +1,6 @@
 #![allow(unused_imports)]
-use ac_library::Dsu;
 use itertools::{Itertools, MinMaxResult};
-use petgraph::unionfind::UnionFind;
-use proconio::{fastout, input, marker::*};
+use proconio::{input, marker::*};
 use std::{
     cmp::{max, min},
     collections::{BTreeMap, BTreeSet, BinaryHeap, HashMap, HashSet, VecDeque},
@@ -10,11 +8,24 @@ use std::{
     iter::{FromIterator, IntoIterator},
     ops::{Add, Div, Mul, Neg, Sub},
     str::FromStr,
+    vec,
 };
-use superslice::Ext;
 
-#[fastout]
 fn main() {
-    input! {}
-    println!("Hello World");
+    input! {
+        mut x: usize,
+    }
+
+    loop {
+        let hnd = x / 100;
+        let ten = (x - hnd * 100) / 10;
+        let one = x - hnd * 100 - ten * 10;
+
+        if hnd * ten == one {
+            println!("{}", x);
+            return;
+        }
+
+        x += 1;
+    }
 }
