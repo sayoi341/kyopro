@@ -1,10 +1,12 @@
 {
 	"name": "kyopro",
-	"image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
 	"features": {
 		"ghcr.io/devcontainers/features/rust:1": "1.70.0"
 	},
-	"postCreateCommand": "chmod +x .devcontainer/init.sh && sudo ./.devcontainer/init.sh && chmod +x .devcontainer/cargo.sh && sudo .devcontainer/cargo.sh",
+	"postCreateCommand": "chmod +x .devcontainer/cargo.sh && sudo .devcontainer/cargo.sh",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -12,7 +14,8 @@
 				"eamodio.gitlens",
 				"seatonjiang.gitmoji-vscode",
 				"oderwat.indent-rainbow",
-				"tamasfe.even-better-toml"
+				"tamasfe.even-better-toml",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	},
