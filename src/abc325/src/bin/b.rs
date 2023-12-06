@@ -13,6 +13,18 @@ use std::{
 
 fn main() {
     input! {
+        n: usize,
+        mut wx: [(usize, usize); n]
     }
-    println!("Hello World");
+
+    let mut count = vec![0; 25];
+
+    for (w, x) in wx {
+        // x時差で、9時から18時までの参加できる所に、標準時で参加できる人数を足していく
+        for t in 9..18 {
+            count[(t + x) % 24] += w;
+        }
+    }
+
+    println!("{}", count.iter().max().unwrap());
 }

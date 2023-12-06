@@ -13,6 +13,9 @@ use std::{
 
 fn main() {
     input! {
+        s: Chars,
+        _t: Chars,
     }
-    println!("Hello World");
+
+    println!("{} san", s.iter().join(""));
 }
