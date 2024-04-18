@@ -3,6 +3,98 @@
 version = 3
 
 [[package]]
+name = "abc291"
+version = "0.1.0"
+dependencies = [
+ "ac-library-rs",
+ "alga",
+ "ascii",
+ "bitset-fixed",
+ "either",
+ "fixedbitset",
+ "getrandom",
+ "im-rc",
+ "indexmap",
+ "itertools 0.9.0",
+ "itertools-num",
+ "lazy_static",
+ "libm",
+ "maplit",
+ "nalgebra",
+ "ndarray",
+ "num",
+ "num-bigint",
+ "num-complex",
+ "num-derive",
+ "num-integer",
+ "num-iter",
+ "num-rational",
+ "num-traits",
+ "ordered-float",
+ "permutohedron",
+ "petgraph",
+ "proconio",
+ "rand",
+ "rand_chacha",
+ "rand_core",
+ "rand_distr",
+ "rand_hc",
+ "rand_pcg",
+ "regex",
+ "rustc-hash",
+ "smallvec",
+ "superslice",
+ "text_io",
+ "whiteread",
+]
+
+[[package]]
+name = "abc292"
+version = "0.1.0"
+dependencies = [
+ "ac-library-rs",
+ "alga",
+ "ascii",
+ "bitset-fixed",
+ "either",
+ "fixedbitset",
+ "getrandom",
+ "im-rc",
+ "indexmap",
+ "itertools 0.9.0",
+ "itertools-num",
+ "lazy_static",
+ "libm",
+ "maplit",
+ "nalgebra",
+ "ndarray",
+ "num",
+ "num-bigint",
+ "num-complex",
+ "num-derive",
+ "num-integer",
+ "num-iter",
+ "num-rational",
+ "num-traits",
+ "ordered-float",
+ "permutohedron",
+ "petgraph",
+ "proconio",
+ "rand",
+ "rand_chacha",
+ "rand_core",
+ "rand_distr",
+ "rand_hc",
+ "rand_pcg",
+ "regex",
+ "rustc-hash",
+ "smallvec",
+ "superslice",
+ "text_io",
+ "whiteread",
+]
+
+[[package]]
 name = "abc323"
 version = "0.1.0"
 dependencies = [
@@ -366,6 +458,52 @@ dependencies = [
 
 [[package]]
 name = "abc331"
+version = "0.1.0"
+dependencies = [
+ "ac-library-rs",
+ "alga",
+ "ascii",
+ "bitset-fixed",
+ "either",
+ "fixedbitset",
+ "getrandom",
+ "im-rc",
+ "indexmap",
+ "itertools 0.9.0",
+ "itertools-num",
+ "lazy_static",
+ "libm",
+ "maplit",
+ "nalgebra",
+ "ndarray",
+ "num",
+ "num-bigint",
+ "num-complex",
+ "num-derive",
+ "num-integer",
+ "num-iter",
+ "num-rational",
+ "num-traits",
+ "ordered-float",
+ "permutohedron",
+ "petgraph",
+ "proconio",
+ "rand",
+ "rand_chacha",
+ "rand_core",
+ "rand_distr",
+ "rand_hc",
+ "rand_pcg",
+ "regex",
+ "rustc-hash",
+ "smallvec",
+ "superslice",
+ "text_io",
+ "whiteread",
+]
+
+[[package]]
+name = "abc349"
 version = "0.1.0"
 dependencies = [
  "ac-library-rs",

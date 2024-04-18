@@ -4,7 +4,7 @@
 		"dockerfile": "Dockerfile"
 	},
 	"features": {
-		"ghcr.io/devcontainers/features/rust:1": "1.70.0"
+		"ghcr.io/devcontainers/features/rust:1": "1.73.0"
 	},
 	"postCreateCommand": "chmod +x .devcontainer/cargo.sh && sudo .devcontainer/cargo.sh",
 	"customizations": {

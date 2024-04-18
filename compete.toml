@@ -145,7 +145,7 @@ path = "./src/{{ contest }}"
 
 [test]
 # Toolchain for the test. (optional)
-toolchain = "1.70.0"
+toolchain = "1.73.0"
 # Profile for `cargo build`. ("dev" | "release")
 #
 # Defaults to `"dev"`.
