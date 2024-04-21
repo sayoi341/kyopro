@@ -17,7 +17,7 @@ fn main() {
       mut wx: [(usize, usize); n]
   }
 
-  let mut count = vec![0; 25];
+  let mut count = [0; 25];
 
   for (w, x) in wx {
     // x時差で、9時から18時までの参加できる所に、標準時で参加できる人数を足していく
