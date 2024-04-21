@@ -17,7 +17,7 @@ fn main() {
   }
 
   for i in 0..9 {
-    let mut check = vec![false; 9];
+    let mut check = [false; 9];
 
     for j in 0..9 {
       if check[a[i][j] - 1] {
@@ -29,7 +29,7 @@ fn main() {
   }
 
   for i in 0..9 {
-    let mut check = vec![false; 9];
+    let mut check = [false; 9];
 
     for j in 0..9 {
       if check[a[j][i] - 1] {
@@ -43,7 +43,7 @@ fn main() {
 
   for bx in 0..3 {
     for by in 0..3 {
-      let mut check = vec![false; 9];
+      let mut check = [false; 9];
 
       for i in 0..3 {
         for j in 0..3 {
