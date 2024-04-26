@@ -23,10 +23,10 @@ open = '[["code", "-a", .manifest_dir], ["code"] + (.paths | map([.src, .test_su
 [template]
 src = '''
 #![allow(unused_imports)]
-use ac_library::Dsu;
+use ac_library::*;
 use itertools::{Itertools, MinMaxResult};
 use petgraph::unionfind::UnionFind;
-use proconio::{fastout, input, marker::*};
+use proconio::*;
 use std::{
     cmp::{max, min},
     collections::{BTreeMap, BTreeSet, BinaryHeap, HashMap, HashSet, VecDeque},
