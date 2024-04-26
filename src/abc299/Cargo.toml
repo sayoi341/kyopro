@@ -1,43 +1,48 @@
 [package]
-name = "abc328"
+name = "abc299"
 version = "0.1.0"
 edition = "2018"
 
 [package.metadata.cargo-compete.bin]
-abc328-a = { alias = "a", problem = "https://atcoder.jp/contests/abc328/tasks/abc328_a" }
-abc328-b = { alias = "b", problem = "https://atcoder.jp/contests/abc328/tasks/abc328_b" }
-abc328-c = { alias = "c", problem = "https://atcoder.jp/contests/abc328/tasks/abc328_c" }
-abc328-d = { alias = "d", problem = "https://atcoder.jp/contests/abc328/tasks/abc328_d" }
-abc328-e = { alias = "e", problem = "https://atcoder.jp/contests/abc328/tasks/abc328_e" }
-abc328-f = { alias = "f", problem = "https://atcoder.jp/contests/abc328/tasks/abc328_f" }
-abc328-g = { alias = "g", problem = "https://atcoder.jp/contests/abc328/tasks/abc328_g" }
+abc299-a = { alias = "a", problem = "https://atcoder.jp/contests/abc299/tasks/abc299_a" }
+abc299-b = { alias = "b", problem = "https://atcoder.jp/contests/abc299/tasks/abc299_b" }
+abc299-c = { alias = "c", problem = "https://atcoder.jp/contests/abc299/tasks/abc299_c" }
+abc299-d = { alias = "d", problem = "https://atcoder.jp/contests/abc299/tasks/abc299_d" }
+abc299-e = { alias = "e", problem = "https://atcoder.jp/contests/abc299/tasks/abc299_e" }
+abc299-ex = { alias = "ex", problem = "https://atcoder.jp/contests/abc299/tasks/abc299_h" }
+abc299-f = { alias = "f", problem = "https://atcoder.jp/contests/abc299/tasks/abc299_f" }
+abc299-g = { alias = "g", problem = "https://atcoder.jp/contests/abc299/tasks/abc299_g" }
 
 [[bin]]
-name = "abc328-a"
+name = "abc299-a"
 path = "src/bin/a.rs"
 
 [[bin]]
-name = "abc328-b"
+name = "abc299-b"
 path = "src/bin/b.rs"
 
 [[bin]]
-name = "abc328-c"
+name = "abc299-c"
 path = "src/bin/c.rs"
 
 [[bin]]
-name = "abc328-d"
+name = "abc299-d"
 path = "src/bin/d.rs"
 
 [[bin]]
-name = "abc328-e"
+name = "abc299-e"
 path = "src/bin/e.rs"
 
 [[bin]]
-name = "abc328-f"
+name = "abc299-ex"
+path = "src/bin/ex.rs"
+
+[[bin]]
+name = "abc299-f"
 path = "src/bin/f.rs"
 
 [[bin]]
-name = "abc328-g"
+name = "abc299-g"
 path = "src/bin/g.rs"
 
 [dependencies]
@@ -54,9 +59,7 @@ ndarray = "=0.15.6"
 nalgebra = "=0.32.3"
 alga = "=0.9.3"
 libm = "=0.2.7"
-rand = { version = "=0.8.5", features = [
-    "small_rng",
-] } # Updated to 0.8.5, assuming you need the latest "rand"
+rand = "=0.8.5"
 getrandom = "=0.2.10"
 rand_chacha = "=0.3.1"
 rand_core = "=0.6.4"
@@ -78,13 +81,10 @@ either = "=1.8.1"
 im-rc = "=15.1.0"
 fixedbitset = "=0.4.2"
 bitset-fixed = "=0.1.0"
-proconio = { version = "=0.4.5", features = [
-    "derive",
-] } # Updated to maintain consistency with other dependencies
+proconio = "=0.4.5"
 text_io = "=0.1.12"
 whiteread = "=0.5.0"
 rustc-hash = "=1.1.0"
 smallvec = "=1.11.0"
-
 
 [dev-dependencies]
