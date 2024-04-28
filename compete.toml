@@ -28,20 +28,20 @@ use itertools::{Itertools, MinMaxResult};
 use petgraph::unionfind::UnionFind;
 use proconio::*;
 use std::{
-    cmp::{max, min},
-    collections::{BTreeMap, BTreeSet, BinaryHeap, HashMap, HashSet, VecDeque},
-    io::*,
-    iter::{FromIterator, IntoIterator},
-    ops::{Add, Div, Mul, Neg, Sub},
-    str::FromStr,
+  cmp::{max, min},
+  collections::{BTreeMap, BTreeSet, BinaryHeap, HashMap, HashSet, VecDeque},
+  io::*,
+  iter::{FromIterator, IntoIterator},
+  ops::{Add, Div, Mul, Neg, Sub},
+  str::FromStr,
 };
 use superslice::Ext;
 
 #[fastout]
 fn main() {
-    input! {
-    }
-    println!("Hello World");
+  input! {
+  }
+  println!("Hello World");
 }
 '''
 
@@ -91,7 +91,7 @@ either = "=1.8.1"
 im-rc = "=15.1.0"
 fixedbitset = "=0.4.2"
 bitset-fixed = "=0.1.0"
-proconio = "=0.4.5",
+proconio = "=0.4.5"
 text_io = "=0.1.12"
 whiteread = "=0.5.0"
 rustc-hash = "=1.1.0"
