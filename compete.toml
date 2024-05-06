@@ -35,7 +35,6 @@ use std::{
   str::FromStr,
 };
 
-#[fastout]
 fn main() {
   input! {
   }
