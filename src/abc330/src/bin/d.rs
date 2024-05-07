@@ -1,5 +1,5 @@
 #![allow(unused_imports)]
-use itertools::{Itertools, MinMaxResult};
+use itertools::{iproduct, Itertools, MinMaxResult};
 use proconio::{input, marker::*};
 use std::{
   cmp::{max, min},
@@ -20,12 +20,10 @@ fn main() {
   let mut ver = vec![0usize; n];
   let mut hor = vec![0usize; n];
 
-  for i in 0..n {
-    for j in 0..n {
-      if ss[i][j] == 'o' {
-        ver[i] += 1;
-        hor[j] += 1;
-      }
+  for (i, j) in iproduct!(0..n, 0..n) {
+    if ss[i][j] == 'o' {
+      ver[i] += 1;
+      hor[j] += 1;
     }
   }
 

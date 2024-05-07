@@ -13,7 +13,7 @@ use std::{
 };
 use superslice::Ext;
 
-fn check(p: (usize, usize), d: usize, h: usize, w: usize, graph: &Vec<Vec<char>>) -> bool {
+fn check(p: (usize, usize), d: usize, h: usize, w: usize, graph: &[Vec<char>]) -> bool {
   for (dx, dy) in &[(d, d), (d, !d + 1), (!d + 1, d), (!d + 1, !d + 1)] {
     let (x, y) = (p.0.wrapping_add(*dx), p.1.wrapping_add(*dy));
     if x >= w || y >= h || graph[y][x] == '.' {

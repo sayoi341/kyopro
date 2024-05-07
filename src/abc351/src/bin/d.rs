@@ -1,6 +1,6 @@
 #![allow(unused_imports)]
 use ac_library::*;
-use itertools::{Itertools, MinMaxResult};
+use itertools::{iproduct, Itertools, MinMaxResult};
 use petgraph::unionfind::UnionFind;
 use proconio::{marker::*, *};
 use std::{
@@ -47,10 +47,8 @@ fn main() {
 
   // distの最大値を求める
   let mut max_dist = 0;
-  for y in 0..h {
-    for x in 0..w {
-      max_dist = max(max_dist, dist[y][x]);
-    }
+  for (x, y) in iproduct!(0..w, 0..h) {
+    max_dist = max(max_dist, dist[y][x]);
   }
   println!("{}", max_dist);
 }
