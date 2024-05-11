@@ -601,6 +601,52 @@ dependencies = [
 ]
 
 [[package]]
+name = "abc312"
+version = "0.1.0"
+dependencies = [
+ "ac-library-rs",
+ "alga",
+ "ascii",
+ "bitset-fixed",
+ "either",
+ "fixedbitset",
+ "getrandom",
+ "im-rc",
+ "indexmap 2.0.0",
+ "itertools",
+ "itertools-num",
+ "lazy_static",
+ "libm",
+ "maplit",
+ "nalgebra",
+ "ndarray",
+ "num",
+ "num-bigint",
+ "num-complex 0.4.3",
+ "num-derive",
+ "num-integer",
+ "num-iter",
+ "num-rational",
+ "num-traits",
+ "ordered-float",
+ "permutohedron",
+ "petgraph",
+ "proconio",
+ "rand",
+ "rand_chacha",
+ "rand_core",
+ "rand_distr",
+ "rand_hc",
+ "rand_pcg",
+ "regex",
+ "rustc-hash",
+ "smallvec",
+ "superslice",
+ "text_io",
+ "whiteread",
+]
+
+[[package]]
 name = "abc323"
 version = "0.1.0"
 dependencies = [
@@ -1154,6 +1200,52 @@ dependencies = [
 
 [[package]]
 name = "abc352"
+version = "0.1.0"
+dependencies = [
+ "ac-library-rs",
+ "alga",
+ "ascii",
+ "bitset-fixed",
+ "either",
+ "fixedbitset",
+ "getrandom",
+ "im-rc",
+ "indexmap 2.0.0",
+ "itertools",
+ "itertools-num",
+ "lazy_static",
+ "libm",
+ "maplit",
+ "nalgebra",
+ "ndarray",
+ "num",
+ "num-bigint",
+ "num-complex 0.4.3",
+ "num-derive",
+ "num-integer",
+ "num-iter",
+ "num-rational",
+ "num-traits",
+ "ordered-float",
+ "permutohedron",
+ "petgraph",
+ "proconio",
+ "rand",
+ "rand_chacha",
+ "rand_core",
+ "rand_distr",
+ "rand_hc",
+ "rand_pcg",
+ "regex",
+ "rustc-hash",
+ "smallvec",
+ "superslice",
+ "text_io",
+ "whiteread",
+]
+
+[[package]]
+name = "abc353"
 version = "0.1.0"
 dependencies = [
  "ac-library-rs",
