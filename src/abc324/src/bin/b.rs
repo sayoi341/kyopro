@@ -1,5 +1,6 @@
 #![allow(unused_imports)]
 use itertools::{Itertools, MinMaxResult};
+use num_traits::Pow;
 use proconio::{input, marker::*};
 use std::{
   cmp::{max, min},
@@ -12,6 +13,23 @@ use std::{
 };
 
 fn main() {
-  input! {}
-  println!("Hello World");
+  input! {
+    mut n: usize,
+  }
+
+  loop {
+    if n % 2 != 0 {
+      break;
+    }
+    n /= 2;
+  }
+
+  loop {
+    if n % 3 != 0 {
+      break;
+    }
+    n /= 3;
+  }
+
+  println!("{}", if n == 1 { "Yes" } else { "No" });
 }

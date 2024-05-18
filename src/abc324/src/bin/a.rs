@@ -12,6 +12,19 @@ use std::{
 };
 
 fn main() {
-  input! {}
-  println!("Hello World");
+  input! {
+    n: usize,
+    a: [usize; n]
+  }
+
+  let first = a[0];
+
+  for aa in a.iter().skip(1) {
+    if aa != &first {
+      println!("No");
+      return;
+    }
+  }
+
+  println!("Yes");
 }
