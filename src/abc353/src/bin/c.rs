@@ -25,7 +25,9 @@ fn main() {
   let mut count = 0;
   for (i, aa) in a.iter().enumerate() {
     let nokori = 100000000 - aa;
-    let b = a.binary_search_by(|x| x.cmp(&nokori).then(std::cmp::Ordering::Greater)).unwrap_or_else(|x| x);
+    let b = a
+      .binary_search_by(|x: &usize| x.cmp(&nokori).then(std::cmp::Ordering::Greater))
+      .unwrap_or_else(|x| x);
     count += min(n - b, n - i - 1);
   }
 
