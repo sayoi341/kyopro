@@ -1,6 +1,6 @@
 #![allow(unused_imports)]
 use ac_library::Dsu;
-use itertools::{Itertools, MinMaxResult};
+use itertools::{iproduct, Itertools, MinMaxResult};
 use petgraph::unionfind::UnionFind;
 use proconio::{fastout, input, marker::*};
 use std::{
@@ -17,42 +17,17 @@ use superslice::Ext;
 fn main() {
   input! {
       n: usize,
-      s: usize,
-      m: usize,
-      l: usize,
+      s: usize, // 6
+      m: usize, // 8
+      l: usize, // 12
   }
-
-  let mut vec = [(s, 6), (m, 8), (l, 12)];
-
-  vec.sort_by(|a, b| (a.0 / a.1).cmp(&(b.0 / b.1)));
 
   let mut ans = usize::MAX;
 
-  for bit in 0..(1 << vec.len()) {
-    let sub_list = (0..vec.len()).filter(|&i| (bit & (1 << i)) != 0).collect::<Vec<_>>();
-
-    println!("{:?}", sub_list);
-
-    let mut sum = 0;
-    let mut cnt = 0;
-    for s in sub_list {
-      let (a, b) = vec[s];
-      let c: usize = n / b;
-      sum += a * c;
-      cnt += c * b;
-      if cnt >= n {
-        ans = min(ans, sum);
-      }
-
-      let c: usize = n / b + 1;
-
-      sum += a * c;
-      cnt += c * b;
-      if cnt >= n {
-        ans = min(ans, sum);
-      }
+  for (s_c, m_c, l_c) in iproduct!(0..=100, 0..=100, 0..100) {
+    if n <= s_c * 6 + m_c * 8 + l_c * 12 {
+      ans = min(ans, s_c * s + m_c * m + l_c * l);
     }
-    println!("{} {}", sum, cnt);
   }
 
   println!("{}", ans);
