@@ -10,8 +10,19 @@ use std::{
   str::FromStr,
   vec,
 };
+use superslice::Ext;
 
 fn main() {
-  input! {}
-  println!("Hello World");
+  input! {
+    s: Chars,
+  }
+
+  for i in 1..=8 {
+    if '0' != s[i * 2 - 1] {
+      println!("No");
+      return;
+    }
+  }
+
+  println!("Yes");
 }
