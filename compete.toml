@@ -34,6 +34,7 @@ use std::{
   ops::{Add, Div, Mul, Neg, Sub},
   str::FromStr,
 };
+use superslice::Ext;
 
 fn main() {
   input! {
