@@ -14,6 +14,7 @@ workspace = { members = [
     "src/abc311",
     "src/abc312",
     "src/abc313",
+    "src/abc314",
     "src/abc323",
     "src/abc324",
     "src/abc325",
@@ -37,12 +38,12 @@ workspace = { members = [
 ] }
 
 [package]
-name = "kyopro"
-version = "0.1.0"
-authors = ["sayoi341 <me@sayoi341.moe>"]
-edition = "2018"
+    authors = ["sayoi341 <me@sayoi341.moe>"]
+    edition = "2018"
+    name    = "kyopro"
+    version = "0.1.0"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+    # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-cargo-snippet = "0.6.5"
+    cargo-snippet = "0.6.5"
