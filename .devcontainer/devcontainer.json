@@ -12,7 +12,6 @@
 			"extensions": [
 				"GitHub.copilot",
 				"eamodio.gitlens",
-				"seatonjiang.gitmoji-vscode",
 				"oderwat.indent-rainbow",
 				"tamasfe.even-better-toml",
 				"ms-azuretools.vscode-docker",
