@@ -9,5 +9,55 @@
       "path": "src"
     }
   ],
-  "settings": {}
+  "settings": {
+    "commit-message-editor.staticTemplate": [
+      "{type}{scope} {description} {issue}"
+    ],
+    "commit-message-editor.dynamicTemplate": [
+      "{type}{scope} {description} {issue}"
+    ],
+    "commit-message-editor.tokens": [
+      {
+        "label": "Type",
+        "name": "type",
+        "type": "enum",
+        "description": "変更の種類。",
+        "combobox": true,
+        "options": [
+          {
+            "label": "solve: ✅",
+            "value": "solve: ✅",
+            "description": "問題を解いた",
+          },
+          {
+            "label": "feat: ✨",
+            "value": "feat: ✨",
+            "description": "機能の追加",
+          },
+        ],
+      },
+      {
+        "label": "Scope",
+        "name": "scope",
+        "type": "text",
+        "description": "変更の範囲。\n例:\n・.gitignore\n・NavBar",
+        "prefix": " (",
+        "suffix": ")",
+      },
+      {
+        "label": "Short Description",
+        "name": "description",
+        "type": "text",
+        "description": "コミットの要約。\n\n例:\n・認証を実装\n・認証画面のスタイルが崩れるバグを修正",
+      },
+      {
+        "label": "Issue",
+        "name": "issue",
+        "type": "text",
+        "description": "関連するIssue番号。 e.g. #47, #53, ...",
+        "prefix": " (",
+        "suffix": ")",
+      },
+    ],
+  }
 }
