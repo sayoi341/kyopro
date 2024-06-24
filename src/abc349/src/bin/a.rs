@@ -15,6 +15,11 @@ use superslice::Ext;
 
 #[fastout]
 fn main() {
-  input! {}
-  println!("Hello World");
+  input! {
+    n: usize,
+    a: [isize; n-1]
+  }
+
+  let sum = a.iter().sum::<isize>();
+  println!("{}", sum * -1);
 }
