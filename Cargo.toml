@@ -35,6 +35,7 @@ workspace = { members = [
     "src/abc333",
     "src/abc334",
     "src/abc335",
+    "src/abc336",
     "src/abc349",
     "src/abc350",
     "src/abc351",
