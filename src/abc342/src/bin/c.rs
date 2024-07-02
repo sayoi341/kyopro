@@ -14,7 +14,7 @@ use superslice::Ext;
 
 fn main() {
   input! {
-    n: usize,
+    _n: usize,
     s: Chars,
     q: usize,
     cdarr: [(char, char); q],
