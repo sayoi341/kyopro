@@ -1,0 +1,17 @@
+services:
+  kyopro:
+    container_name: kyopro
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - type: bind
+        source: ../
+        target: /workspaces/kyopro
+      - type: volume
+        source: kyopro-rs-target
+        target: /workspaces/kyopro/target
+    tty: true
+
+volumes:
+  kyopro-rs-target:

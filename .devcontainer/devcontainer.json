@@ -1,12 +1,8 @@
 {
 	"name": "kyopro",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-	"features": {
-		"ghcr.io/devcontainers/features/rust:1": "1.73.0"
-	},
-	"postCreateCommand": "chmod +x .devcontainer/cargo.sh && sudo .devcontainer/cargo.sh",
+	"workspaceFolder": "/workspaces/kyopro",
+	"dockerComposeFile": "../docker/docker-compose.yml",
+	"service": "kyopro",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -18,13 +14,5 @@
 				"adam-bender.commit-message-editor"
 			]
 		}
-	},
-	"containerEnv": {
-		"CARGO_BUILD_TARGET_DIR": "/tmp/target"
-	},
-	"runArgs": [
-		"--name",
-		"kyopro"
-	],
-	"remoteUser": "root"
+	}
 }
